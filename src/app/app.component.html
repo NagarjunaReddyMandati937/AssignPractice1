@@ -1,0 +1,17 @@
+<h2>Assignment on Event Binding onclick, directives ngFor and ngStyle</h2>
+<hr>
+<div align="center">
+  <p>Normal Event Binding onclick</p>
+  <button class="btn btn-success" (click)="onclick()">Display Details</button>
+  <p>{{clicked}}</p>
+  <p>Toogle output with loop using ngFor</p>
+  <!-- <button class="btn btn-primary" (click)="show_text =!show_text">Show Details</button> -->
+  <button class="btn btn-primary" (click)="onToogle()">Show Text</button>
+  <p *ngIf="show_text">This is me, Nagarjuna Reddy Mandati</p>
+  <div *ngFor="let count of log" [ngStyle]="{backgroundColor:count>=5?'green':'orange'}"
+    [ngClass]="{'white_color':count>=5,'red_color':count<5}"
+    >"clicked" {{count}} time
+
+  </div>
+
+</div>
